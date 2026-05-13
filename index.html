@@ -1,112 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Biosilver Control de Plagas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biosilver | Control de Plagas</title>
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body { scroll-behavior: smooth; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+      url('https://images.unsplash.com/photo-1581579185169-8d2e1e1a8b4b');
+      background-size: cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      transition: 0.3s;
+    }
+  </style>
 </head>
 
-<body class="bg-light">
+<body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class="container">
-  <a class="navbar-brand">Biosilver</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold">Biosilver</a>
 
-  <div>
-    <a href="servicios.html" class="btn btn-light btn-sm">Servicios</a>
-    <a href="monitoreo.html" class="btn btn-light btn-sm">Monitoreo</a>
-    <a href="produccion.html" class="btn btn-light btn-sm">Producción</a>
-    <a href="equipo.html" class="btn btn-light btn-sm">Equipo</a>
-    <a href="contacto.html" class="btn btn-light btn-sm">Contacto</a>
-    <a href="dashboard.html" class="btn btn-warning btn-sm">Admin</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+        <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        <li class="nav-item">
+          <a href="dashboard.html" class="btn btn-warning ms-2">Admin</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>
 
 <!-- HERO -->
-<div class="container mt-5 text-center">
-  <h1>Biosilver Control de Plagas</h1>
-  <p class="lead">Soluciones profesionales para el control y prevención de plagas</p>
+<section class="hero">
+  <h1 class="display-4 fw-bold">Control Profesional de Plagas</h1>
+  <p class="lead">Soluciones seguras, rápidas y efectivas para tu hogar o negocio</p>
 
-  <a href="https://forms.gle/Nxc86ikL41dkERZMA" target="_blank" class="btn btn-primary btn-lg mt-3">
+  <a href="https://forms.gle/uSQhCoRgNukJFXaz5" target="_blank" class="btn btn-primary btn-lg mt-3">
     Solicitar servicio
   </a>
-</div>
-
-<!-- SOBRE NOSOTROS -->
-<div class="container mt-5">
-  <h2>¿Quiénes somos?</h2>
-  <p>
-    Biosilver Control de Plagas es una empresa especializada en brindar soluciones eficientes
-    para la eliminación y prevención de plagas en hogares y negocios. Nos enfocamos en ofrecer
-    un servicio seguro, rápido y de alta calidad, garantizando la satisfacción de nuestros clientes.
-  </p>
-</div>
+</section>
 
 <!-- SERVICIOS -->
-<div class="container mt-5">
-  <h2>Nuestros Servicios</h2>
+<section id="servicios" class="container mt-5">
+  <h2 class="text-center mb-4">Nuestros Servicios</h2>
 
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="card p-3">
-        <h5>Control de roedores</h5>
-        <p>Eliminación efectiva de ratas y ratones.</p>
-      </div>
-    </div>
+  <div class="row text-center">
 
     <div class="col-md-4">
-      <div class="card p-3">
-        <h5>Fumigación general</h5>
+      <div class="card p-4 shadow">
+        <i class="bi bi-bug fs-1 text-danger"></i>
+        <h5 class="mt-3">Fumigación</h5>
         <p>Control de insectos en hogares y negocios.</p>
       </div>
     </div>
 
     <div class="col-md-4">
-      <div class="card p-3">
-        <h5>Prevención de plagas</h5>
-        <p>Soluciones para evitar infestaciones futuras.</p>
+      <div class="card p-4 shadow">
+        <i class="bi bi-house fs-1 text-success"></i>
+        <h5 class="mt-3">Control de roedores</h5>
+        <p>Eliminación de ratas y ratones.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-4 shadow">
+        <i class="bi bi-shield-check fs-1 text-primary"></i>
+        <h5 class="mt-3">Prevención</h5>
+        <p>Protección para evitar futuras infestaciones.</p>
       </div>
     </div>
 
   </div>
-</div>
-
-<!-- BENEFICIOS -->
-<div class="container mt-5">
-  <h2>¿Por qué elegirnos?</h2>
-
-  <ul class="list-group">
-    <li class="list-group-item">✔ Atención rápida y personalizada</li>
-    <li class="list-group-item">✔ Técnicos capacitados</li>
-    <li class="list-group-item">✔ Productos seguros y certificados</li>
-    <li class="list-group-item">✔ Garantía de servicio</li>
-  </ul>
-</div>
+</section>
 
 <!-- PROCESO -->
-<div class="container mt-5">
-  <h2>Nuestro proceso</h2>
+<section id="proceso" class="container mt-5">
+  <h2 class="text-center mb-4">¿Cómo trabajamos?</h2>
 
-  <ol class="list-group list-group-numbered">
-    <li class="list-group-item">Solicitud del servicio</li>
-    <li class="list-group-item">Evaluación del problema</li>
-    <li class="list-group-item">Aplicación del tratamiento</li>
-    <li class="list-group-item">Seguimiento y prevención</li>
-  </ol>
-</div>
+  <div class="row text-center">
+
+    <div class="col-md-3">
+      <i class="bi bi-clipboard-check fs-1"></i>
+      <p>Solicitud</p>
+    </div>
+
+    <div class="col-md-3">
+      <i class="bi bi-search fs-1"></i>
+      <p>Diagnóstico</p>
+    </div>
+
+    <div class="col-md-3">
+      <i class="bi bi-tools fs-1"></i>
+      <p>Tratamiento</p>
+    </div>
+
+    <div class="col-md-3">
+      <i class="bi bi-graph-up fs-1"></i>
+      <p>Seguimiento</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section id="beneficios" class="container mt-5">
+  <h2 class="text-center mb-4">¿Por qué elegirnos?</h2>
+
+  <div class="row">
+
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">✔ Atención rápida</li>
+        <li class="list-group-item">✔ Personal capacitado</li>
+        <li class="list-group-item">✔ Productos seguros</li>
+      </ul>
+    </div>
+
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item">✔ Garantía de servicio</li>
+        <li class="list-group-item">✔ Precios accesibles</li>
+        <li class="list-group-item">✔ Resultados comprobados</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
 
 <!-- CONTACTO -->
-<div class="container mt-5 mb-5">
+<section id="contacto" class="container mt-5 mb-5 text-center">
   <h2>Contacto</h2>
-  <p>Teléfono:5549313224</p>
-  <p>Correo: biosilver@gmail.com</p>
+  <p>📞 5549313224</p>
+  <p>📧 biosilver@gmail.com</p>
 
   <a href="https://wa.me/5215549313224" class="btn btn-success">
-    Contactar por WhatsApp
+    WhatsApp
   </a>
-</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3">
+  © 2026 Biosilver Control de Plagas
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
