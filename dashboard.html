@@ -11,9 +11,41 @@
 
 <h2>Panel de Administración</h2>
 
-<p>Aquí se verán las solicitudes de clientes.</p>
+<table class="table table-bordered mt-4">
+<thead class="table-dark">
+<tr>
+<th>Fecha</th>
+<th>Nombre</th>
+<th>Plaga</th>
+<th>Ubicación</th>
+</tr>
+</thead>
+<tbody id="tabla"></tbody>
+</table>
 
 </div>
+
+<script>
+const sheetID = "1ize6lnburfgXNAGD5Jo5Vvd0dSfqJA2GOk26x0Ek31o";
+const url = `https://opensheet.elk.sh/${sheetID}/Form%20Responses%201`;
+
+fetch(url)
+.then(res => res.json())
+.then(data => {
+  let tabla = document.getElementById("tabla");
+
+  data.forEach(row => {
+    tabla.innerHTML += `
+      <tr>
+        <td>${row.Timestamp}</td>
+        <td>${row.Nombre}</td>
+        <td>${row["Tipo de plaga"]}</td>
+        <td>${row.Ubicación}</td>
+      </tr>
+    `;
+  });
+});
+</script>
 
 </body>
 </html>
